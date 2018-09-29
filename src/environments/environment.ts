@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAc9Tt8pQQF3ntu2Tz66iUKl_fXHtdhIyc',
-    authDomain: 'firestarter-96e46.firebaseapp.com',
-    databaseURL: 'https://firestarter-96e46.firebaseio.com',
-    projectId: 'firestarter-96e46',
-    storageBucket: 'firestarter-96e46.appspot.com',
-    messagingSenderId: '581326886241'
+    apiKey: 'AIzaSyB5TSmDKDn2JLyh5UX3A-mh6LV3-j9EdAo',
+    authDomain: 'pedometer1-56dd2.firebaseapp.com',
+    databaseURL: 'https://pedometer1-56dd2.firebaseio.com',
+    projectId: 'pedometer1-56dd2',
+    storageBucket: 'pedometer1-56dd2.appspot.com',
+    messagingSenderId: '695308702162'
   }
 };
 
