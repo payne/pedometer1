@@ -22,11 +22,6 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireFunctionsModule } from 'angularfire2/functions';
 
-import { GoogleMapsAPIWrapper } from '@agm/core';
-import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
-import { AgmCoreModule } from '@agm/core';
-import { HaversineService } from 'ng2-haversine';
-
 // IMPORTANT
 // Add your own project credentials to environments/*.ts
 
@@ -34,10 +29,6 @@ import { HaversineService } from 'ng2-haversine';
   declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAqxjtsvw8b-EVZ1sPk1ZJ8dh8jKl7eDU0'
-    }),
-    AgmJsMarkerClustererModule,
     BrowserTransferStateModule,
     AppRoutingModule,
     CoreModule,
@@ -53,7 +44,6 @@ import { HaversineService } from 'ng2-haversine';
       enabled: environment.production
     })
   ],
-  providers: [GoogleMapsAPIWrapper, HaversineService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

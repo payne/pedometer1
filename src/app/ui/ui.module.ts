@@ -11,9 +11,21 @@ import { NotificationMessageComponent } from './notification-message/notificatio
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { SsrPageComponent } from './ssr-page/ssr-page.component';
+import { GoogleMapsAPIWrapper } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
+import { AgmCoreModule } from '@agm/core';
+import { HaversineService } from 'ng2-haversine';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAqxjtsvw8b-EVZ1sPk1ZJ8dh8jKl7eDU0'
+    }),
+    AgmJsMarkerClustererModule
+  ],
   declarations: [
     UserLoginComponent,
     HomePageComponent,
@@ -30,6 +42,7 @@ import { SsrPageComponent } from './ssr-page/ssr-page.component';
     NotificationMessageComponent,
     UserProfileComponent,
     UserFormComponent
-  ]
+  ],
+  providers: [GoogleMapsAPIWrapper, HaversineService]
 })
 export class UiModule {}
